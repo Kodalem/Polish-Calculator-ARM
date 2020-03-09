@@ -45,9 +45,10 @@ printnum:
 str-to-int:
 	push {r0-r3, lr}
 
-	bl readstr
-	bl
+	bl readstr @Reading the string
+	bl negativitychecker @Goes check the negativity of the string to number
 
+	cmp *number*, #0 @If at the end of the array, skip the whole ordeal...
 
 
 	pop {r0−r3,lr}
@@ -74,5 +75,3 @@ dummy:
 	pop {r0−r3,lr}
 	bx lr
 @@@@@@@@@@@@@@@
-
-
